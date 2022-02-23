@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/student_tracker
+    username: XXX
+    password: XXX
+  
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  
+  sql:
+    init:
+      mode: embedded
+      platform: mysql
+
+logging:
+  level:
+    org.springframework.web: error
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.liquibase: debug
